@@ -2,9 +2,18 @@
 
     <section>
 
-        <ul>
-            <li>
-
+        <ul v-for = "(element, index) in search" :key='index'>
+            <li  >
+                {{ element.title }}
+            </li>
+            <li  >
+                {{ element.original_title }}
+            </li>
+            <li  >
+                {{ element.original_language }}
+            </li>
+            <li  >
+                {{ element.vote_average }}
             </li>
         </ul>
 
@@ -17,7 +26,13 @@
 <script>
 
 export default {
+
     name: 'Main',
+    
+    props: {
+        search: Array,
+    },
+
 }
 
 </script>
@@ -27,8 +42,20 @@ export default {
 <style lang="scss" scoped>
 
 section{
+    
     background-color: gray;
-    height: 100vh;
+    
+
+
+    ul{
+        border: 2px solid red;
+        padding: 20px;
+    }
+
+
+
+
 }
+
 
 </style>

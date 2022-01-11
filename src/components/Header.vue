@@ -7,7 +7,8 @@
         </div>
 
       <div class="searchbar">
-            <input v-model="searchedText" type="text">
+            <button @click="$emit('search', searchingText)">Search</button>
+            <input type="text" v-model="searchingText" >
       </div>
 
     </section>
@@ -22,7 +23,7 @@ export default {
     name: 'Header',
     data: function (){
         return {
-            searchedText: '',
+            searchingText: '',
         }
     }
 }
@@ -49,7 +50,14 @@ section{
     }
 
     .searchbar {
+
         margin: auto 20px;
+
+        button{
+            padding: 2px 5px;
+            margin: 0 10px;
+            border-radius: 10px ;
+        }
     }
 
 }
