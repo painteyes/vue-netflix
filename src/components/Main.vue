@@ -1,19 +1,32 @@
 <template>
 
-    <section>
+    <div class="main-container">
 
-        <!-- REMINDER: Creare un componente per le Card -->
+        <section class="movies">
 
-        <h2>Film</h2>
+            <h2>Film</h2>
+            <div class="cards">
+                <SingleCard 
+                v-for='element,index in movieSearchResult' :key='index' 
+                :movieObject='element' 
+                :isMovie='true' />
+            </div>
 
-        <SingleCard v-for='element,index in movieSearchResult' :key='index' :movieObject='element' />
+        </section>
 
-        <h2>Series</h2>
+        <section class="series">
 
-        <SingleCard />
+            <h2>TV Series</h2>
+            <div class="cards">
+                <SingleCard v-for='element,index in seriesSearchResult' :key='index' 
+                :seriesObject='element' 
+                :isSeries='true' />
+            </div>
+            
+        </section>
 
-    </section>
-
+    </div>
+    
 </template>
 
 // -------------------------------------------------------------------
@@ -31,9 +44,8 @@ export default {
     },
     
     props: {
-
         movieSearchResult: Array,
-
+        seriesSearchResult: Array,
     },
 
     methods: {
@@ -49,6 +61,24 @@ export default {
 
 <style lang="scss" scoped>
 
+    .main-container{
+        width: 90%;
+        margin: auto;
 
+        h2{
+            margin: 20px 0;
+            font-size: 50px;
+        }
+    }
+
+    .movies,
+    .series {
+        margin-bottom: 50px;        
+    }
+
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+    }
 
 </style>
