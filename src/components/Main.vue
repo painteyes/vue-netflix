@@ -4,7 +4,8 @@
 
         <section class="movies">
 
-            <h2>Film</h2>
+            <h2 v-show='movieSearchResult.length > 0'>Film</h2>
+
             <div class="cards">
                 <SingleCard 
                 v-for='element,index in movieSearchResult' :key='index' 
@@ -16,7 +17,8 @@
 
         <section class="series">
 
-            <h2>TV Series</h2>
+            <h2 v-show='seriesSearchResult.length > 0'>TV Series</h2>
+
             <div class="cards">
                 <SingleCard v-for='element,index in seriesSearchResult' :key='index' 
                 :seriesObject='element' 
