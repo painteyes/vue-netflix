@@ -6,41 +6,11 @@
 
         <h2>Film</h2>
 
-        <ul v-for = "(element, index) in movieSearchResult" :key='index'>
-            <li  >
-                {{ element.title }}
-            </li>
-            <li  >
-                {{ element.original_title }}
-            </li>
-            <li  >
-                {{ getFlag() }}
-            </li>
-            <li  >
-                {{ element.vote_average }}
-                
-            </li>
-        </ul>
+        <SingleCard v-for='element,index in movieSearchResult' :key='index' :movieObject='element' />
 
-        <!-- <h2>Series</h2>
+        <h2>Series</h2>
 
-        <ul v-for = "(element, index) in movieSearchResult" :key='index'>
-            <li  >
-                {{ element.title }}
-            </li>
-            <li  >
-                {{ element.original_title }}
-            </li>
-            <li  >
-                {{ getFlag() }}
-            </li>
-            <li  >
-                {{ element.vote_average }}
-            </li>
-        </ul> -->
-
-
-
+        <SingleCard />
 
     </section>
 
@@ -50,9 +20,15 @@
 
 <script>
 
+import SingleCard from './SingleCard.vue';
+
 export default {
 
     name: 'Main',
+
+    components: {
+        SingleCard,
+    },
     
     props: {
 
@@ -62,17 +38,6 @@ export default {
 
     methods: {
 
-        getFlag: function(){
-
-            this.movieSearchResult.forEach(element => {
-
-                if (element.original_language === 'ita' || element.original_language === 'en' ) {
-                    return "<img :src='require(" + "'../assets/" + element.original_language + ".svg')>"
-                } else  {
-                    return element.original_language
-                }
-            });               
-        }
 
     },
 
@@ -84,13 +49,6 @@ export default {
 
 <style lang="scss" scoped>
 
-section{
 
-    ul{
-        border: 2px solid red;
-        padding: 20px;
-    }
-
-}
 
 </style>
