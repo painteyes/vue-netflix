@@ -58,8 +58,6 @@
 
             <!-- vote -->
             <li v-if="isMovie">
-
-                <!-- Voto: {{ getNumberOfStars(movieObject.vote_average) }} -->
                  
                 <i class="fas fa-star" v-for="number,index in getNumberOfStars(movieObject.vote_average)" :key='index'></i>
                 <i class="far fa-star" v-for="number,index in (5 - getNumberOfStars(movieObject.vote_average))" :key='index'></i>
@@ -67,8 +65,6 @@
             </li>
 
             <li v-if="isSeries">
-
-                <!-- Voto: {{ getNumberOfStars(seriesObject.vote_average) }} -->
 
                 <i class="fas fa-star" v-for="number,index in getNumberOfStars(seriesObject.vote_average)" :key='index'></i>
                 <i class="far fa-star" v-for="number,index in (5 - getNumberOfStars(seriesObject.vote_average))" :key='index'></i>
