@@ -2,9 +2,9 @@
 
   <div id="app">
     
-    <Header @search='getSearch' />
+    <Header @searchRequest='getMovieSearch' />
 
-    <Main :search='searchResult' />
+    <Main :movieSearchResult='movieSearch' />
 
   </div>
 
@@ -29,24 +29,25 @@ export default {
 
   data: function() {
     return {
+      apiKey: '6362dd11ef9f4da66e17d4b0df63adb6',
       searchedText:"",
-      searchResult:[],
+      movieSearch:[],
     }
   },
 
   methods: {
 
-    getSearch: function(searchingText){
+    getMovieSearch: function(searchingText){
 
       this.searchedText = searchingText;
 
       axios.get('https://api.themoviedb.org/3/search/movie', {
         params: {
-          api_key: '6362dd11ef9f4da66e17d4b0df63adb6',
+          api_key: this.apiKey,
           query: this.searchedText,
         }
       }).then ((response) => {
-        this.searchResult = response.data.results;
+        this.movieSearch = response.data.results;
       });
 
     }

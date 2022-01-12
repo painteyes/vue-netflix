@@ -7,7 +7,7 @@
         </div>
 
       <div class="searchbar">
-            <button @click="$emit('search', searchingText)">Search</button>
+            <button @click="$emit('searchRequest', searchingText)">Search</button>
             <input type="text" v-model="searchingText" >
       </div>
 
