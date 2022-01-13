@@ -6,9 +6,17 @@
 
 body{
     background-color: gray;
-
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
 }
 
 img{
     max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+
+    li{
+        padding: 7px 0;
+    }
 }
