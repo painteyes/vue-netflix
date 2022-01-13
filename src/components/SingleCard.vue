@@ -7,11 +7,13 @@
             <div class="cover-front">
 
                 <template v-if="isMovie">
-                    <img :src="'https://image.tmdb.org/t/p/w342'+ movieObject.poster_path" alt="">
+                    <img v-if="movieObject.poster_path" :src="'https://image.tmdb.org/t/p/w342'+ movieObject.poster_path" alt="">
+                    <h2 v-else>{{movieObject.title}}</h2>
                 </template>
 
                 <template v-if="isSeries">
-                <img :src="'https://image.tmdb.org/t/p/w342'+ seriesObject.poster_path" alt="">
+                    <img v-if="seriesObject.poster_path" :src="'https://image.tmdb.org/t/p/w342'+ seriesObject.poster_path" alt="">
+                    <h2 v-else>{{seriesObject.title}}</h2>
                 </template>
             </div>
 
@@ -132,43 +134,60 @@ export default {
 
 section{
 
-    
-    margin-right: 40px;
+    width: 300px;
+    height: 400px;
+    margin-right: 10px;
     margin-bottom: 40px;
-    background-color: black;
-    color: white;
 
-    padding: 20px;
-    // height: 700px;
-    // width: 200px ;
-    
-    ul{  
-        // padding: 20px;
-        // height: 300px;
-        // width: 200px ;
-    }
+    .cover{
 
-    .flag{
-        width: 30px ;
-        vertical-align: middle;
-        padding-left: 5px ;
-    }
+        height: 100%;
+        background-color: black;
+        color: white;
+        border: 1px solid white;
 
-    .cover-retro{
-        width: 342px;
-        span{
-            font-weight: bold;
-            color: whitesmoke;
+        .cover-front{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: scale-down;
+            }
+
+            h2{
+                width: 100%;
+                text-align: center;
+            }
         }
-    }
 
-    .cover-retro {
-        display: none;
+        .cover-retro{
+
+            display: none;
+            padding: 10px;
+
+            .flag{
+                width: 30px ;
+                vertical-align: middle;
+                padding-left: 5px ;
+            }
+
+            span{
+                font-weight: bold;
+                color: whitesmoke;
+            }
+
+        }
+
     }
 
     .cover:hover {
 
         cursor: pointer;
+        overflow-y: auto;
 
         .cover-front {
             display: none;
@@ -178,8 +197,6 @@ section{
             display: block;
         }  
     }
-
-     
 
 }
 
