@@ -13,7 +13,7 @@
 
                 <template v-if="isSeries">
                     <img v-if="seriesObject.poster_path" :src="'https://image.tmdb.org/t/p/w342'+ seriesObject.poster_path" alt="">
-                    <h2 v-else>{{seriesObject.title}}</h2>
+                    <h2 v-else>{{seriesObject.name}}</h2>
                 </template>
             </div>
 
