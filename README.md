@@ -7,7 +7,7 @@ Netflix-inspired website with search function via API calls for movie and TV ser
 - Vue.js
 
 ## Live demo
-You can **[check it out here](https://painteyes.github.io/vue-netflix/)** !
+You can **[check it out here](https://painteyes.github.io/vue-netflix)** !
 
 
 
