@@ -1,24 +1,16 @@
-# vue-boolflix
+## About the project
+Netflix-inspired website with search function via API calls for movie and TV series data.
 
-## Project setup
-```
-npm install
-```
+## Technologies 
+- HTML
+- CSS
+- Vue.js
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Live demo
+You can **[check it out here](https://painteyes.github.io/vue-netflix)** !
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Screenshot
+<img src="https://i.postimg.cc/xdhz7C2d/screencapture-localhost-8080-2022-04-11-12-23-31.png"/>
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Contributor
+Andrea Occhipinti ( [GitHub](https://github.com/painteyes) | [LinkedIn](https://www.linkedin.com/in/occhipinti) )
