@@ -104,7 +104,7 @@ section {
 }
 .list-title {
     color: whitesmoke;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
     h1{
         font-family: roboto;
