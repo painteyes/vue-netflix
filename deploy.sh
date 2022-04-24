@@ -22,4 +22,4 @@ git commit -m 'deploy'
 # if you are deploying to https://painteyes.github.io/vue-netflix
 git push -f git@github.com:painteyes/vue-netflix.git main:gh-pages
 
-cd -
+cd - 
