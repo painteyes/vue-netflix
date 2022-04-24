@@ -1,5 +1,5 @@
 ## About the project
-Netflix-inspired website with search function via API calls for movie and TV series data.
+Netflix inspired website with search function via API calls for movie and TV series data.
 
 ## Technologies 
 - HTML
