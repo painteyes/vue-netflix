@@ -10,6 +10,7 @@ Displayed titles are returned via API call to The Movie Database (TMDB).
 ## Technologies 
 - HTML
 - CSS
+- JavaScript 
 - Vue.js
 
 ## Live demo
