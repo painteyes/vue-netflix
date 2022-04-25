@@ -19,7 +19,7 @@ Displayed titles are returned via API call to The Movie Database (TMDB).
 You can **[check it out here](https://painteyes.github.io/vue-netflix)** !
 
 ### Screenshot
-<img src="https://i.postimg.cc/xdhz7C2d/screencapture-localhost-8080-2022-04-11-12-23-31.png"/>
+<img src="https://i.postimg.cc/L5B8wGCh/netflix.png"/>
 
 ## Contributor
 Andrea Occhipinti ( [GitHub](https://github.com/painteyes) | [LinkedIn](https://www.linkedin.com/in/occhipinti) )
