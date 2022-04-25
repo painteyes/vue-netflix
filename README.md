@@ -5,9 +5,7 @@ Netflix-inspired web page.
 - Search for movies and TV series using the search bar
 - Display title information by hovering the cursor over the title tab
 
-**Note**
-
-Displayed titles are returned via API call to The Movie Database (TMDB).
+**Note: ** Displayed titles are returned via API call to The Movie Database (TMDB).
 
 ## Technologies 
 - HTML
