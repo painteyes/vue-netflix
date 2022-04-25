@@ -1,12 +1,9 @@
 ## About the project
-
-Netflix-inspired web page.
+Netflix-inspired web page with displayed results returned via API call to The Movie Database (TMDB).
 
 Features:
 - Search for titles using the search bar
 - Display title information by hovering the cursor over the title tab
-
-Displayed results are returned via API call to The Movie Database (TMDB).
 
 ## Technologies 
 - HTML
