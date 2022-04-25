@@ -6,7 +6,6 @@ Netflix-inspired web page.
 - Display title information by hovering the cursor over the title tab
 
 **(Note)** 
-
 Displayed titles are returned via API call to The Movie Database (TMDB).
 
 ## Technologies 
